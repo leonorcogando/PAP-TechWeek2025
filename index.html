@@ -173,58 +173,63 @@
 
     <!-- Login Modal -->
     <div class="modal" id="loginModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Login</h2>
-                <button class="close-modal" onclick="closeModal('login')">&times;</button>
-            </div>
-            <div class="input-group">
-                <label>Email</label>
-                <input type="email">
-            </div>
-
-            <div class="input-group">
-                <label>Password</label>
-                <input type="password">
-            </div>
-
-            <button class="btn btn-primary" style="width:100%">Entrar</button>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Login</h2>
+            <button class="close-modal" onclick="closeModal('login')">&times;</button>
         </div>
+
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="loginEmail">
+        </div>
+
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="loginPassword">
+        </div>
+
+        <button class="btn btn-primary" style="width:100%" id="loginBtn">Entrar</button>
     </div>
+</div>
 
     <!-- Register Modal -->
     <div class="modal" id="registerModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Inscrição</h2>
-                <button class="close-modal" onclick="closeModal('register')">&times;</button>
-            </div>
-
-            <div class="input-group">
-                <label>Nome Completo</label>
-                <input type="text">
-            </div>
-
-            <div class="input-group">
-                <label>Email</label>
-                <input type="email">
-            </div>
-
-            <div class="input-group">
-                <label>Empresa</label>
-                <input type="text">
-            </div>
-
-            <div class="input-group">
-                <label>Password</label>
-                <input type="password">
-            </div>
-
-            <button class="btn btn-primary" style="width:100%">Criar Conta</button>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Inscrição</h2>
+            <button class="close-modal" onclick="closeModal('register')">&times;</button>
         </div>
+
+        <div class="input-group">
+            <label>Nome Completo</label>
+            <input type="text" id="regNome">
+        </div>
+
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="regEmail">
+        </div>
+
+        <div class="input-group">
+            <label>Empresa</label>
+            <input type="text" id="regEmpresa">
+        </div>
+
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="regPassword">
+        </div>
+
+        <button class="btn btn-primary" style="width:100%" id="registerBtn">Criar Conta</button>
     </div>
+</div>
 
     <!-- JS -->
     <script src="index.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="firebaseconfig.js"></script>
+    <script src="auth.js"></script>
 </body>
 </html>

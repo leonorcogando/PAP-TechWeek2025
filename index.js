@@ -1,5 +1,7 @@
 // Countdown Timer
-const eventDate = new Date('2025-06-15T09:00:00').getTime();
+const eventDate = new Date('2026-06-15T09:00:00').getTime();
+// Podes mudar para qualquer data, por exemplo:
+// const eventDate = new Date("2026-12-31T23:59:59").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();

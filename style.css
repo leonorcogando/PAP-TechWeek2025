@@ -52,6 +52,27 @@ body.light-mode {
             color: #c084fc;
         }
 
+        /* Coloca o botão em linha separada, centrado abaixo dos itens hero-info */
+        .hero-buttons {
+            width: 100%; /* força quebra de linha dentro do flex-wrap */
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .hero-buttons .btn {
+            padding: 0.6rem 1.25rem;
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons {
+                margin-top: 0.75rem;
+            }
+            .hero-buttons .btn {
+                padding: 0.5rem 1rem;
+            }
+        }
+
 /* Animated Background */
 .bg-animation {
     position: fixed;

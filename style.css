@@ -195,6 +195,146 @@ nav {
     margin: 4rem 0;
 }
 
+/* Schedule Section */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .schedule-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.schedule-card {
+    background: rgba(26, 11, 46, 0.5);
+    backdrop-filter: blur(4px);
+    border: 1px solid #2d1b4e;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: all 0.3s;
+}
+
+.schedule-card:hover {
+    border-color: rgba(168, 85, 247, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.2);
+}
+
+.schedule-day {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.day-number {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.schedule-card:nth-child(1) .day-number {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+}
+
+.schedule-card:nth-child(2) .day-number {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+}
+
+.schedule-card:nth-child(3) .day-number {
+    background: linear-gradient(135deg, #a855f7, #d946ef);
+}
+
+.schedule-card:nth-child(4) .day-number {
+    background: linear-gradient(135deg, #d946ef, #ec4899);
+}
+
+.schedule-card:nth-child(5) .day-number {
+    background: linear-gradient(135deg, #ec4899, #ef4444);
+}
+
+.day-name {
+    color: #e2e8f0;
+    margin-bottom: 0.25rem;
+}
+
+.day-theme {
+    color: #c084fc;
+    font-size: 0.875rem;
+}
+
+.events-list {
+    list-style: none;
+    padding: 0;
+}
+
+.event-item {
+    border-left: 2px solid rgba(168, 85, 247, 0.3);
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.event-time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+.event-time svg {
+    width: 12px;
+    height: 12px;
+}
+
+.event-title {
+    color: #cbd5e1;
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.event-type {
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    background: rgba(168, 85, 247, 0.2);
+    color: #c084fc;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+}
+
+.schedule-note {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.note-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(168, 85, 247, 0.2);
+    border: 1px solid rgba(168, 85, 247, 0.5);
+    border-radius: 0.5rem;
+    color: #cbd5e1;
+}
+
+.note-box svg {
+    width: 20px;
+    height: 20px;
+    color: #c084fc;
+}
+
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 2rem;

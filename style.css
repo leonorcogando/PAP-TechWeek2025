@@ -30,6 +30,28 @@ body.light-mode {
     color: var(--light);
 }
 
+.hero-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10rem;
+            color: #cbd5e1;
+        }
+
+        .hero-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-info svg {
+            width: 20px;
+            height: 20px;
+            color: #c084fc;
+        }
+
 /* Animated Background */
 .bg-animation {
     position: fixed;

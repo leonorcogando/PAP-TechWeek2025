@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Techweek 2026</title>
+    <title>TechWeek 2026</title>
 
     <!-- Ligar CSSSSSSgiSt -->
     <link rel="stylesheet" href="style.css">
@@ -18,7 +18,7 @@
             <div class="nav-buttons">
                 <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
                 <button class="btn btn-secondary" onclick="openModal('login')">Login</button>
-                <button class="btn btn-primary" onclick="openModal('register')">Inscrever-se</button>
+                <button class="btn btn-primary" onclick="openModal('register')">Registo</button>
             </div>
         </nav>
     </header>
@@ -27,7 +27,7 @@
         
 
         <section class="hero">
-            <h1>TECHWEEK 2025</h1>
+            <h1>TECHWEEK 2026</h1>
             <p class="subtitle">A semana que define o futuro da tecnologia</p>
             
             <div class="countdown">
@@ -47,6 +47,30 @@
                     <div class="countdown-number" id="seconds">00</div>
                     <div class="countdown-label">Segundos</div>
                 </div>
+            </div>
+        <div class="hero-info">
+                <div class="hero-info-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                    <span>21 - 25 de Novembro</span>
+                </div>
+                <div class="dot"></div>
+                <div class="hero-info-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span>EPB - Escola Profissional de Braga</span>
+                </div>
+            </div>
+            </section>
+
+         <section class="section">
+            <h2 class="section-title"> Sobre a TechWeek</h2>
+            <div class="card">
+                <p>A TechWeek está de volta à Escola Profissional de Braga! Uma semana repleta de tecnologia, inovação e aprendizagem espera por ti. Depois do enorme sucesso das edições anteriores, o evento regressa com novas palestras, workshops interativos e momentos de debate sobre temas que estão a transformar o mundo digital.
+                    Mais do que um evento, a TechWeek é uma experiência: uma oportunidade para aprender, experimentar e mergulhar no universo tecnológico, tornando a escola num espaço ainda mais ligado ao futuro.</p>
             </div>
         </section>
 
@@ -218,7 +242,7 @@
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m4-2h.01M12 20a8 8 0 100-16 8 8 0 000 16z"/>
                     </svg>
-                    <span>Programação sujeita a alterações. Consulte actualizações no site.</span>
+                    <span>Programação sujeita a alterações</span>
                 </div>
             </div>
         </div>
@@ -267,12 +291,7 @@
             <p style="color: var(--gray);">https://www.tech-week.com</p>
         </section>
 
-        <section class="section">
-            <h2 class="section-title"> Sobre a Techweek</h2>
-            <div class="card">
-                <p>A Techweek é o maior evento de tecnologia do ano...</p>
-            </div>
-        </section>
+       
     </div>
 
     <!-- Login Modal -->
@@ -284,7 +303,7 @@
         </div>
 
         <div class="input-group">
-            <label>Email</label>
+            <label>E-mail</label>
             <input type="email" id="loginEmail">
         </div>
 
@@ -301,7 +320,7 @@
     <div class="modal" id="registerModal">
     <div class="modal-content">
         <div class="modal-header">
-            <h2>Inscrição</h2>
+            <h2>Registo</h2>
             <button class="close-modal" onclick="closeModal('register')">&times;</button>
         </div>
 
@@ -311,13 +330,8 @@
         </div>
 
         <div class="input-group">
-            <label>Email</label>
+            <label>E-mail</label>
             <input type="email" id="regEmail">
-        </div>
-
-        <div class="input-group">
-            <label>Empresa</label>
-            <input type="text" id="regEmpresa">
         </div>
 
         <div class="input-group">

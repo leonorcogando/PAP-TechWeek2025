@@ -28,6 +28,25 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
+// Se a página for carregada com um hash (ex: #programacao), removemos o hash
+// e garantimos que o scroll fique no topo para evitar saltar diretamente para a secção
+window.addEventListener('load', function() {
+    if (window.location.hash) {
+        // espera um tick para garantir que o browser já processou o jump
+        setTimeout(function() {
+            // volta para o topo
+            window.scrollTo(0, 0);
+            // remove o hash da URL sem recarregar a página
+            if (history.replaceState) {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            } else {
+                // fallback: limpa o hash (pode causar um pequeno jump em navegadores antigos)
+                window.location.hash = '';
+            }
+        }, 0);
+    }
+});
+
 // Theme Toggle
 function toggleTheme() {
     document.body.classList.toggle('light-mode');

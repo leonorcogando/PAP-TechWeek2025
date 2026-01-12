@@ -27,6 +27,12 @@
         
 
         <section class="hero">
+            <!-- Vídeo de fundo (autoplay, muted, loop). Fonte em src/BannerVideo.mp4 -->
+            <video class="hero-video-bg" autoplay muted loop playsinline>
+                <source src="src/BannerVideo.mp4" type="video/mp4">
+                <!-- fallback: imagem estática se o vídeo não carregar -->
+            </video>
+            <div class="hero-video-overlay" aria-hidden="true"></div>
             <h1>TechWeek 2026</h1>
             <p class="subtitle">Uma semana dedicada ás novas tecnologias</p>
             
@@ -53,7 +59,7 @@
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                     </svg>
-                    <span>21 - 25 de Novembro</span>
+                    <span>20 - 24 de Abril</span>
                 </div>
                 <div class="dot"></div>
                 <div class="hero-info-item">
@@ -64,7 +70,8 @@
                     <span>EPB - Escola Profissional de Braga</span>
                 </div>
               <div class="hero-buttons">
-                <a class="btn btn-primary btn-lg">Inscrições</a>
+                <a class="btn btn-primary btn-lg">Inscreva-se</a>
+                <a class="btn btn-primary btn-lg">Programação</a>
             </div>
             </section>
 

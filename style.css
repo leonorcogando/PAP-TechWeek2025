@@ -19,8 +19,8 @@
 
 :root {
   /* Cores principais do tema — manter aqui para fácil alteração */
-  --primary: #00d4ff;
-  --secondary: #7b2ff7;
+  --primary: #2b7ebd;
+  --secondary: #8230a6;
   --dark: #0a0e27;
   --darker: #060920;
   --light: #ffffff;
@@ -113,7 +113,7 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
 /* -----------------------------
    5) Fundo animado (decorativo)
    ----------------------------- */
-.bg-animation { position: fixed; top:0; left:0; width:100%; height:100%; z-index:-1; overflow:hidden; }
+.bg-animation { position: fixed; top:0; left:0; width:100%; height:100%; z-index:-2; overflow:hidden; }
 .bg-animation::before { content:''; position:absolute; width:200%; height:200%; background: radial-gradient(circle at 20% 50%, rgba(123,47,247,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(0,212,255,0.06) 0%, transparent 50%); animation: tw-rotate 20s linear infinite; }
 @keyframes tw-rotate { 0%{transform:rotate(0)} 100%{transform:rotate(360deg)} }
 
@@ -121,9 +121,50 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
    6) Hero / Intro
    - título, subtítulo, info e CTA
    ----------------------------- */
-.hero { text-align:center; padding:4rem 2rem; position:relative; }
 h1 { font-size:3.5rem; margin-bottom:1rem; }
 .subtitle { font-size:1.3rem; color:var(--gray); margin-bottom:2rem; }
+
+/* Hero: inclui vídeo de fundo (se presente) e sobreposição escura */
+.hero { text-align:center; padding:4rem 2rem; position:relative; z-index:1; overflow:hidden; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+
+/* vídeo de background que cobre toda a hero */
+.hero-video-bg {
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 100%;
+   height: 100vh; /* garante que cobre toda a tela inicial */
+   object-fit: cover;
+   z-index: -1;
+   pointer-events: none;
+}
+
+.hero-video-overlay {
+   position: absolute;
+   inset: 0;
+   /* Escurece o vídeo para aumentar contraste com o texto */
+   background: rgba(0,0,0,0.6);
+   z-index: 0;
+   pointer-events: none;
+}
+
+/* Garantir que título e subtítulo fiquem visíveis acima do vídeo */
+.hero h1,
+.hero .subtitle {
+  position: relative;
+  z-index: 2; /* acima da overlay */
+  color: var(--light);
+  text-shadow: 0 6px 18px rgba(0,0,0,0.65);
+}
+
+/* garantir que o restante conteúdo da hero (countdown, info, botões) fique acima da overlay */
+.hero .countdown,
+.hero-info,
+.hero-buttons {
+   position: relative;
+   z-index: 2;
+}
 
 /* Linha de info (datas, local) abaixo do hero */
 .hero-info { display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; align-items:center; margin-bottom:0.5rem; color:#cbd5e1; }
@@ -132,7 +173,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 .dot { width:6px; height:6px; border-radius:50%; background:#6b7280; }
 
 /* CTA (botão) alinhado em linha separada e centralizado */
-.hero-buttons { width:100%; display:flex; justify-content:center; margin-top:1rem; }
+.hero-buttons { width:100%; display:flex; justify-content:center; margin-top:1rem; margin-bottom:2rem; }
 
 /* -----------------------------
    7) Contador (countdown)
@@ -237,7 +278,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 }
 
 @media (max-width: 480px) {
-  .hero-buttons { margin-top: 0.75rem; }
+   .hero-buttons { margin-top: 0.75rem; margin-bottom: 1.25rem; }
   .btn-lg { padding: 0.8rem 1.45rem; font-size: 1rem; }
 }
 

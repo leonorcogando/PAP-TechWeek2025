@@ -19,12 +19,12 @@
 
 :root {
   /* Cores principais do tema — manter aqui para fácil alteração */
-  --primary: #2b7ebd;
+  --primary: #1b8ade;
   --secondary: #8230a6;
   --dark: #0a0e27;
   --darker: #060920;
   --light: #ffffff;
-  --gray: #8892b0;
+  --gray: #949fbf;
 }
 
 /* -----------------------------
@@ -173,8 +173,14 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 .dot { width:6px; height:6px; border-radius:50%; background:#6b7280; }
 
 /* CTA (botão) alinhado em linha separada e centralizado */
-.hero-buttons { width:100%; display:flex; justify-content:center; margin-top:1rem; margin-bottom:2rem; }
-
+.hero-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 24px; /* ← separação entre os botões */
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
 /* -----------------------------
    7) Contador (countdown)
    ----------------------------- */
@@ -183,6 +189,13 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 .countdown-item:hover { transform: translateY(-5px); border-color: var(--primary); }
 .countdown-number { font-size:3rem; font-weight:700; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .countdown-label { color:var(--gray); margin-top:0.5rem; }
+/* Countdown sem animação nem borda azul */
+.countdown-item:hover {
+  transform: none;
+  border-color: rgba(0,212,255,0.12);
+}
+
+
 
 /* -----------------------------
    8) Estilos genéricos para secções
@@ -199,13 +212,37 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
    color: var(--light) !important;
 }
 
+/* ===== Sobre a TechWeek ===== */
+.about-text {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 3rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  cursor: default;
+}
+
+/* remover qualquer animação/hover */
+.about-text:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: rgba(255,255,255,0.08);
+}
+
+/* texto */
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #e5e7eb;
+  text-align: center;
+}
+
 /* -----------------------------
    9) Programação (schedule)
    ----------------------------- */
 .schedule-grid { display:grid; grid-template-columns:1fr; gap:1.5rem; }
 @media (min-width:1024px) { .schedule-grid { grid-template-columns: repeat(5,1fr); } }
-.schedule-card { background: rgba(26,11,46,0.5); backdrop-filter: blur(4px); border:1px solid #2d1b4e; border-radius:8px; padding:1.5rem; transition:all .25s; }
-.schedule-card:hover { border-color: rgba(168,85,247,0.4); transform: translateY(-4px); box-shadow:0 0 30px rgba(168,85,247,0.12); }
 .schedule-day { text-align:center; margin-bottom:1.25rem; }
 .day-number { width:64px; height:64px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:white; font-size:1.25rem; font-weight:700; margin-bottom:0.5rem; }
 /* Cores por dia (mantive os gradientes originais) */
@@ -230,8 +267,6 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
    10) Palestrantes / Cartões
    ----------------------------- */
 .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:2rem; }
-.card { background: rgba(255,255,255,0.03); backdrop-filter: blur(8px); border-radius:15px; padding:2rem; border:1px solid rgba(0,212,255,0.06); transition: all .25s; cursor: pointer; }
-.card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(0,212,255,0.06); }
 .card-header { display:flex; align-items:center; gap:1rem; margin-bottom:1rem; }
 .card-icon { width:60px; height:60px; border-radius:10px; background: linear-gradient(135deg,var(--primary),var(--secondary)); display:flex; align-items:center; justify-content:center; font-size:1.5rem; }
 .card h3 { color: var(--light); }
@@ -278,8 +313,15 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 }
 
 @media (max-width: 480px) {
-   .hero-buttons { margin-top: 0.75rem; margin-bottom: 1.25rem; }
-  .btn-lg { padding: 0.8rem 1.45rem; font-size: 1rem; }
+.hero-buttons { margin-top: 0.75rem; margin-bottom: 1.25rem; }
+.btn-lg { padding: 0.8rem 1.45rem; font-size: 1rem; }
 }
+
+
+
+
+
+
+
 
 /* Fim do ficheiro */

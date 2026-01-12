@@ -19,8 +19,8 @@
 
 :root {
   /* Cores principais do tema — manter aqui para fácil alteração */
-  --primary: #1b8ade;
-  --secondary: #8230a6;
+  --primary: #5c1ca5;
+  --secondary: #559ee2;
   --dark: #0a0e27;
   --darker: #060920;
   --light: #ffffff;
@@ -76,7 +76,6 @@ body.light-mode {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.22);
 }
 
 .btn-secondary {
@@ -201,7 +200,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
    8) Estilos genéricos para secções
    ----------------------------- */
 .section { margin:4rem 0; }
-.section-title { font-size:2.5rem; margin-bottom:2rem; text-align:center; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.section-title { font-size:2.5rem; margin-bottom:4rem; text-align:center; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 
 /* Variante para títulos sem gradiente: cor sólida (branco) */
 .section-title--plain {

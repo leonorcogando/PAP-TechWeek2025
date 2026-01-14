@@ -24,8 +24,8 @@ firebase.auth().onAuthStateChanged((user) => {
     document.getElementById("userInfo").style.display = "flex";
     document.getElementById("loginButton").style.display = "none";
 
-    const name = user.displayName || user.email;
-    document.getElementById("userName").textContent = name;
+    const nome = user.displayName || user.email;
+    document.getElementById("userName").textContent = nome;
   } else {
     document.getElementById("userInfo").style.display = "none";
     document.getElementById("loginButton").style.display = "block";
@@ -35,12 +35,21 @@ firebase.auth().onAuthStateChanged((user) => {
 
 // REGISTO
 document.getElementById("registerBtn").addEventListener("click", () => {
+  const nome = document.getElementById("regNome").value;
   const email = document.getElementById("regEmail").value;
   const password = document.getElementById("regPassword").value;
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
+
+      // Atualizar o nome do utilizador
+      return userCredential.user.updateProfile({
+        displayName: nome
+      });
+    })
+    .then(() => {
       alert("Conta criada com sucesso!");
+      closeModal('register');
     })
     .catch((error) => {
       alert("Erro: " + error.message);

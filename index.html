@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechWeek 2026</title>
+    <title>TECHWEEK 2026</title>
 
     <!-- Ligar CSSSSSSgiSt -->
     <link rel="stylesheet" href="style.css">
@@ -13,11 +13,22 @@
     <header class="headerstyle">
         
         <nav>
+            
             <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="#oradores">Oradores</a></li>
+                <li><a href="#eventos-anteriores">Eventos Anteriores</a></li>
+                <li><a href="#pareceiros">Parceiros</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contactos">Contactos</a></li>
+            </ul>
             <div class="nav-buttons">
                 <button class="btn btn-secondary" onclick="openModal('login')">Login</button>
                 <button class="btn btn-primary" onclick="openModal('register')">Registo</button>
+                
             </div>
+            
         </nav>
         
     </header>
@@ -30,9 +41,9 @@
                 <source src="src/BannerVideo.mp4" type="video/mp4">
             </video>
             <div class="hero-video-overlay" aria-hidden="true"></div>
-            <h1>TechWeek 2026</h1>
-            <p class="subtitle">Uma semana dedicada ás novas tecnologias</p>
-            
+            <h1 style="margin-top: 8rem">TECH WEEK 2026</h1>
+            <p class="subtitle">Uma semana dedicada às novas tecnologias</p>
+    
             <div class="countdown">
                 <div class="countdown-item">
                     <div class="countdown-number" id="days">00</div>
@@ -68,7 +79,7 @@
                 </div>
               <div class="hero-buttons">
                 <a class="btn btn-primary btn-lg">Inscreva-se</a>
-                <a class="btn btn-primary btn-lg" href="#programacao">Programação</a>
+                <a class="btn btn-primary btn-lg" href="#agenda" style="text-decoration: none;">Agenda</a>
             </div>
             </section>
 
@@ -80,10 +91,10 @@
             </div>
         </section>
 
-        <section id="programacao" class="section">
+        <section id="agenda" class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title section-title--plain">Programação</h2>
+                <h2 class="section-title section-title--plain">Agenda</h2>
             </div>
 
             <div class="schedule-grid">
@@ -245,10 +256,8 @@
 
             <div class="schedule-note">
                 <div class="note-box">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
-                    </svg>
-                    <span>Programação sujeita a alterações</span>
+                    
+                    <span>Agenda sujeita a alterações</span>
                     
                 </div>
             </div>
@@ -256,27 +265,27 @@
     </section>
 
         <section class="section">
-            <h2 class="section-title section-title--plain">Palestrantes</h2>
+            <h2 class="section-title section-title--plain">Oradores</h2>
             <div class="grid">
                 <div class="card">
                     <div class="speaker-img"></div>
                     <h3>António Cunha</h3>
                     <p><strong>Tema:</strong> O Futuro da IA Generativa</p>
-                    <p>Empresa: líder em soluções de inteligência artificial.</p>
+                    <p><strong>Empresa: </strong> líder em soluções de inteligência artificial.</p>
                 </div>
 
                 <div class="card">
                     <div class="speaker-img"></div>
                     <h3>Maria Sofia</h3>
                     <p><strong>Tema:</strong> Arquitetura Serverless em Escala</p>
-                    <p>Especialistas em infraestrutura cloud.</p>
+                    <p><strong>Empresa: </strong>Especialistas em infraestrutura cloud.</p>
                 </div>
 
                 <div class="card">
                     <div class="speaker-img"></div>
                     <h3>Jorge Dias</h3>
                     <p><strong>Tema:</strong> Do MVP ao Unicórnio</p>
-                    <p>Aceleradora de startups de sucesso.</p>
+                    <p><strong>Empresa:</strong> Aceleradora de startups de sucesso.</p>
                 </div>
             </div>
         </section>
@@ -331,6 +340,14 @@
         <button class="btn btn-primary" style="width:100%" id="registerBtn">Criar Conta</button>
     </div>
 </div>
+
+<footer class="site-footer">
+    <img 
+        src="https://www.epb.pt/img/Apoios23-11.png" 
+        alt="Apoios e Parceiros"
+        class="footer-image"
+    >
+</footer>
 
     <!-- JS -->
     <script src="index.js"></script>

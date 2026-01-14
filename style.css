@@ -1,12 +1,10 @@
-/* ==================================================
-   TechWeek - Folha de estilos organizada
+/* TechWeek - Folha de estilos organizada
    Ordem e secções (com comentários em português):
    1) Reset/Variáveis  2) Base  3) Utilitários  4) Cabeçalho/Nav
    5) Fundo animado  6) Hero  7) Contador  8) Secções gerais
    9) Programação 10) Palestrantes/Cartões 11) QR 12) Modais
    13) Formulários 14) Tipografia 15) Responsivo
-   As cores e gradientes foram mantidos — se quiseres alterar, edita :root.
-   ================================================== */
+   As cores e gradientes foram mantidos — se quiseres alterar, edita :root. */
 
 /* -----------------------------
    1) Reset e variáveis CSS
@@ -143,7 +141,7 @@ body.light-mode header { background: rgba(255,255,255,0.9); border-bottom: 1px s
 
 nav { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; }
 .logo {
-  width: 120px;
+  width: 60px;
   height: 50px; /* altura real do header */
   background-image: url("src/logotipo.png");
   background-size: contain;
@@ -154,6 +152,27 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
 }
 
 .nav-buttons { display:flex; gap:1rem; align-items:center; }
+
+.nav-links {
+   display: flex;
+   gap: 2rem;
+   list-style: none;
+   font-size: 20px;
+}
+
+.nav-links a {
+   color: #cbd5e1;
+   text-decoration: none;
+   transition: color 0.3s;
+}
+
+.nav-links a:hover {
+   color: #559ee2;
+}
+
+        
+
+
 
 /* -------- ---------------------
    5) Fundo animado (decorativo)
@@ -241,7 +260,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
-/* -----------------------------
+/* --------------f---------------
    7) Contador (countdown)
    ----------------------------- */
 .countdown { display:flex; justify-content:center; gap:2rem; margin:3rem 0; flex-wrap:wrap; }
@@ -276,11 +295,10 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 .about-text {
   max-width: 900px;
   margin: 0 auto;
-  padding: 2.5rem 3rem;
-  background: rgba(168,85,247,0.12);
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.08);
-  cursor: default;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
 }
 
 /* remover qualquer animação/hover */
@@ -362,7 +380,9 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 /* -----------------------------
    14) Ajustes tipográficos pequenos
    ----------------------------- */
-.subtitle { margin-bottom: 1rem; }
+.subtitle { 
+   margin-bottom: 1rem;
+}
 
 /* -----------------------------
    15) Responsivo (apenas ajustes necessários)
@@ -378,6 +398,27 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 .hero-buttons { margin-top: 0.75rem; margin-bottom: 1.25rem; }
 .btn-lg { padding: 0.8rem 1.45rem; font-size: 1rem; }
 }
+
+/*Footer / Apoios*/
+.site-footer {
+  width: 100%;
+  padding: 2rem 1rem;
+  background: #000; /* fundo preto como na imagem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-image {
+  max-width: 100%;
+  margin-left: auto;
+  height: auto;
+}
+
+.site-footer {
+  margin-top: 6rem;
+}
+
 
 
 

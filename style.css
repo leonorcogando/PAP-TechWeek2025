@@ -330,14 +330,17 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 .schedule-card:nth-child(3) .day-number { background: linear-gradient(135deg,#a855f7,#a855f7); }
 .schedule-card:nth-child(4) .day-number { background: linear-gradient(135deg,#d946ef,#d946ef); }
 .schedule-card:nth-child(5) .day-number { background: linear-gradient(135deg,#ec4899,#ec4899); }
+
 .day-name { color:#e2e8f0; margin-bottom:0.25rem; }
 .day-theme { color:#c084fc; font-size:0.875rem; }
+
 .events-list { list-style:none; padding:0; }
 .event-item { border-left: 2px solid rgba(168,85,247,0.18); padding-left:1rem; padding-top:.5rem; padding-bottom:.5rem; margin-bottom:1rem; }
 .event-time { display:flex; align-items:center; gap:.5rem; margin-bottom:.25rem; color:#64748b; font-size:.875rem; }
 .event-time svg { width:12px; height:12px; }
 .event-title { color:#cbd5e1; margin-bottom:.25rem; font-size:.875rem; }
 .event-type { display:inline-block; padding:.125rem .5rem; background: rgba(168,85,247,0.14); color:#c084fc; border-radius:3px; font-size:.75rem; }
+
 .schedule-note { margin-top:3rem; text-align:center; }
 
 .note-box { display:inline-flex; align-items:center; gap:.5rem; padding:.75rem 1.5rem; background: rgba(168,85,247,0.12); border:1px solid rgba(168,85,247,0.18); border-radius:8px; color:#cbd5e1; }
@@ -422,9 +425,3 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 
 
 
-
-
-
-
-
-/* Fim do ficheiro */

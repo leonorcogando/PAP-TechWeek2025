@@ -158,12 +158,19 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
 /* -------- ---------------------
    5) Fundo animado (decorativo)
    ----------------------------- */
-.bg-animation { position: fixed; top:0; left:0; width:100%; height:100%; overflow:hidden; }
-.bg-animation::before { content:''; position:absolute; width:200%; height:200%; background: radial-gradient(circle at 20% 50%, rgba(123,47,247,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(0,212,255,0.06) 0%, transparent 50%); animation: tw-rotate 20s linear infinite; }
-@keyframes tw-rotate { 0%{transform:rotate(0)} 100%{transform:rotate(360deg)} }
+.headerstyle {
+       position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 10;
+}
+
+
 
 /* -----------------------------
-   6) Hero / Intro
+   6) Hero / Intro   
    - título, subtítulo, info e CTA  
    ----------------------------- */
 h1 { font-size:3.5rem; margin-bottom:1rem; }

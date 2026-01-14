@@ -401,7 +401,22 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 .hero-buttons { margin-top: 0.75rem; margin-bottom: 1.25rem; }
 .btn-lg { padding: 0.8rem 1.45rem; font-size: 1rem; }
 }
-
+/* -----------------------------
+   16) Footer
+   ----------------------------- */
+.footer { background: var(--darker); color: var(--light); padding: 3rem 0 1rem; margin-top: 4rem; }
+.footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+.footer-section { flex: 1; min-width: 250px; }
+.footer-section h3 { color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem; }
+.footer-section p { margin: 0.5rem 0; color: var(--gray); }
+.footer-section ul { list-style: none; padding: 0; }
+.footer-section li { margin-bottom: 0.5rem; }
+.footer-section a { color: var(--gray); text-decoration: none; transition: color 0.3s; }
+.footer-section a:hover { color: var(--primary); }
+.social-links { display: flex; gap: 1rem; }
+.social-links a { color: var(--gray); transition: color 0.3s; }
+.social-links a:hover { color: var(--primary); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; text-align: center; color: var(--gray); font-size: 0.9rem; }
 /*Footer / Apoios*/
 .site-footer {
   width: 100%;

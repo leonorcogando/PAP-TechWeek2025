@@ -42,10 +42,17 @@ document.getElementById("registerBtn").addEventListener("click", () => {
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
 
-      // Atualizar o nome do utilizador
       return userCredential.user.updateProfile({
         displayName: nome
+      }).then(() => {
+        return userCredential.user.reload();
+      }).then(() => {
+        // ATUALIZAR O UI MANUALMENTE AQUI
+        document.getElementById("userInfo").style.display = "flex";
+        document.getElementById("loginButton").style.display = "none";
+        document.getElementById("userName").textContent = nome;
       });
+
     })
     .then(() => {
       alert("Conta criada com sucesso!");
@@ -55,3 +62,5 @@ document.getElementById("registerBtn").addEventListener("click", () => {
       alert("Erro: " + error.message);
     });
 });
+
+

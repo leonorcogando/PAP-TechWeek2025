@@ -31,7 +31,10 @@
 
                 <button id="loginButton" class="btn btn-secondary" onclick="openModal('login')">Login</button>
                 <button class="btn btn-primary" onclick="openModal('register')">Registo</button>
-                <script src="auth.js"></script>
+                    <button onclick="enviarEmailTeste()">Enviar Email</button>
+                    <script src="email.js"></script>
+
+
 
                 
             </div>
@@ -407,5 +410,8 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
     <script src="firebaseconfig.js"></script>
     <script src="auth.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="email.js"></script>
+
 </body>
 </html>

@@ -13,9 +13,8 @@
     <header class="headerstyle">
         
         <nav>
-            
-            <div class="logo"></div>
-            <ul class="nav-links">
+            <img src="src/Logotipo.png" class="logo">
+            <ul class ="nav-links" alignn="center">
                 <li><a href="#agenda">Agenda</a></li>
                 <li><a href="#oradores">Oradores</a></li>
                 <li><a href="#eventos-anteriores">Eventos Anteriores</a></li>
@@ -30,7 +29,7 @@
                 </div>
 
                 <button id="loginButton" class="btn btn-secondary" onclick="openModal('login')">Login</button>
-                <button class="btn btn-primary" onclick="openModal('register')">Registo</button>
+                <button class="btn btn-secondary" onclick="openModal('register')">Registo</button>
                 <script src="auth.js"></script>
 
                 
@@ -78,7 +77,7 @@
                     </svg>
                     <span>20 - 24 de Abril</span>
                 </div>
-                <div class="dot"></div>
+                
                 <div class="hero-info-item">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
@@ -94,6 +93,8 @@
 
             <section class="section">
                 <h2 class="section-title section-title--plain"> Sobre a TechWeek</h2>
+                <h3 class="section-subtitle">Informática, Inovação e Tecnologia</h3>
+                
             <div class="card about-text">
                 <p>A TechWeek está de volta à Escola Profissional de Braga! Uma semana repleta de tecnologia, inovação e aprendizagem espera por ti. Depois do enorme sucesso das edições anteriores, o evento regressa com novas palestras, workshops interativos e momentos de debate sobre temas que estão a transformar o mundo digital.
                     Mais do que um evento, a TechWeek é uma experiência, uma oportunidade para aprender, experimentar e mergulhar no universo tecnológico, tornando a escola num espaço ainda mais ligado ao futuro.</p>
@@ -103,7 +104,7 @@
         <section id="agenda" class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title section-title--plain">Agenda</h2>
+                <h2 class="section-title section-title--plain" style="padding-top: 2rem;">Agenda</h2>
             </div>
 
             <div class="schedule-grid">
@@ -273,7 +274,7 @@
         </div>
     </section>
 
-        <section class="section">
+        <section class="section" id ="oradores" style="padding-top: 2rem;">
             <h2 class="section-title section-title--plain">Oradores</h2>
             <div class="grid">
                 <div class="card">

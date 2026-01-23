@@ -17,8 +17,8 @@
 
 :root {
   /* Cores principais do tema — manter aqui para fácil alteração */
-  --primary: #7900c3;
-  --secondary: #7900c3;
+  --primary: #1E6FFF;
+  --secondary: #1E6FFF;
   --dark: #0a0e27;
   --darker: #060920;
   --light: #ffffff;
@@ -104,11 +104,18 @@ body.light-mode {
 }
 
 .btn-secondary {
-  background: transparent;
+  background: #d10c0c;
   border: none;
-  color: var(--primary);
+  color: white;
+  margin-left: 2rem;
+  align-items: right;   
+  
 }
-.btn-secondary:hover { background: var(--primary); color: white; }
+.btn-secondary:hover {
+  background: #a10808;
+  transform: translateY(-2px);
+}
+
 
 /* Botão grande para a área hero */
 .btn-lg { padding: 1rem 2rem; font-size: 1.05rem; border-radius: 4px; width: 10rem }
@@ -172,7 +179,25 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
    
 }
 
-        
+#userInfo {
+  min-width: 200px;
+  gap: 2rem;
+}
+
+/* Botão Login Cores */
+
+#loginButton {
+  background: linear-gradient(135deg, #1E6FFF, #1E6FFF) !important;
+  color: white !important;    
+  transition: all 0.3s ease;
+}
+
+#loginButton:hover {
+  background: linear-gradient(135deg, #1855be, #1855be) !important;
+  transform: translateY(-3px);
+}
+
+           
 
 
 
@@ -268,7 +293,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 .countdown { display:flex; justify-content:center; gap:2rem; margin:3rem 0; flex-wrap:wrap; }
 .countdown-item { background: rgba(255,255,255,0.05); backdrop-filter: blur(3.5px); padding:2rem; border-radius:15px; border:0px solid rgba(0,212,255,0.12); min-width:120px; transition:transform .25s; }
 .countdown-item:hover { transform: translateY(-5px); border-color: var(--primary); }
-.countdown-number { font-size:3rem; font-weight:700; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.countdown-number { font-size:3rem; font-weight:700; background: linear-gradient(135deg, #8A4DFF, #8A4DFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .countdown-label { color:var(--gray); margin-top:0.5rem; }
 /* Countdown sem animação nem borda azul */
 .countdown-item:hover {

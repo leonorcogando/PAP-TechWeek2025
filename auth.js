@@ -19,6 +19,17 @@ document.getElementById("loginBtn").addEventListener("click", () => {
   });
 });
 
+// LOGOUT
+function logout() {
+  firebase.auth().signOut()
+    .then(() => {
+      console.log("Utilizador desconectado com sucesso");
+    })
+    .catch((error) => {
+      alert("Erro ao desconectar: " + error.message);
+    });
+}
+
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     document.getElementById("userInfo").style.display = "flex";

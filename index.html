@@ -25,14 +25,16 @@
             <div class="nav-buttons">
                 <div id="userInfo" style="display:none; align-items:center; gap:8px;">
                 <i class="fa fa-user"></i>
+                <icon class="fas fa-user-circle" style="font-size: 24px;"></icon>
                  <span id="userName"></span>
+                 <button id="logoutBtn" class="btn btn-secondary" onclick="logout()">Logout</button>
                 </div>
                 
                 <button id="loginButton" class="btn btn-secondary" onclick="openModal('login')">Login</button>
-                <button class="btn btn-secondary" onclick="openModal('register')">Registo</button>
+                <!-- <button class="btn btn-secondary" onclick="openModal('register')">Registo</button> -->
                 
-                <button onclick="enviarEmailTeste()">Enviar Email Teste</button>
-                <script src="auth.js"></script>
+                <!-- <button onclick="enviarEmailTeste()">Enviar Email Teste</button>
+                <script src="auth.js"></script> -->
 
                 
             </div>
@@ -323,6 +325,10 @@
         </div>
 
         <button class="btn btn-primary" style="width:100%" id="loginBtn">Entrar</button>
+        
+        <p style="text-align: center; margin-top: 12px; font-size: 14px;">
+            Não tem conta? <a href="#" onclick="closeModal('login'); openModal('register'); return false;" style="color: #7900c3; text-decoration: none; font-weight: 500; cursor: pointer;">Registe-se aqui</a>
+        </p>
     </div>
 </div>
 

@@ -73,16 +73,6 @@ body {
    pointer-events: none;
 }
 
-/* Modo claro: apenas sobrescreve as variáveis para simplificar tema */
-body.light-mode {
-  --dark: #f0f4f8;
-  --darker: #e2e8f0;
-  --light: #0a0e27;
-  --gray: #4a5568;
-  background: var(--dark);
-  color: var(--light);
-}
-
 /* -----------------------------
    3) Utilitários e helpers
    - container, botões reutilizáveis, toggle de tema
@@ -113,17 +103,17 @@ body.light-mode {
 }
 
 .btn-secondary {
-  background: #d20d0d;
+  background: #b634a9;
   border: none;
   color: white;
   margin-left: 3rem;
   align-items: right;   
   
 }
-.btn-secondary:hover {
+/*.btn-secondary:hover {
   background: #a10876;
   transform: translateY(-2px);
-}
+}*/
 
 
 /* Botão grande para a área hero */
@@ -487,8 +477,8 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
    16) Footer
    ----------------------------- */
 .footer { background: var(--darker); color: var(--light); padding: 3rem 0 1rem; margin-top: 4rem; }
-.footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; align-content: center; }
-.footer-section { flex: 1; min-width: 250px; }
+.footer-content { display: flex ; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; align-content: center; }
+.footer-section { flex: 1; min-width: 250px; align-items: center;}
 .footer-section h3 { color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem; }
 .footer-section p { margin: 0.5rem 0; color: var(--gray); }
 .footer-section ul { list-style: none; padding: 0; }
@@ -506,7 +496,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
   padding: 4rem 1rem;
   background: #000; /* fundo preto como na imagem */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 

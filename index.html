@@ -7,6 +7,8 @@
 
     <!-- Ligar CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -20,14 +22,13 @@
                 <li><a href="#eventos-anteriores">Eventos Anteriores</a></li>
                 <li><a href="#pareceiros">Parceiros</a></li>
                 <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#contactos">Contactos</a></li>
+                <!-- <li><a href="#contactos">Contactos</a></li> -->
             </ul>
             <div class="nav-buttons">
-                <div id="userInfo" style="display:none; align-items:center; gap:8px;">
-                <i class="fa fa-user"></i>
-                <icon class="fas fa-user-circle" style="font-size: 24px;"></icon>
-                 <span id="userName"></span>
-                 <button id="logoutBtn" class="btn btn-secondary" onclick="logout()">Logout</button>
+                <div id="userInfo">
+                    <i class="fas fa-user-circle"></i>
+                    <span id="userName"></span>
+                    <button id="logoutBtn" class="btn btn-secondary" onclick="logout()">Logout</button>
                 </div>
                 
                 <button id="loginButton" class="btn btn-secondary" onclick="openModal('login')">Login</button>

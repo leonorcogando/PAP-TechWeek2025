@@ -96,7 +96,7 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: var(--primary);
   color: white;
 }
 
@@ -104,12 +104,13 @@ body {
   transform: translateY(-2px);
 }
 
+/* botao Logout */
 .btn-secondary {
   background: #b634a9;
   border: none;
   color: white;
-  margin-left: 3rem;
-  align-items: right;   
+  margin-left: 1rem;
+  align-items: right;
   
 }
 /*.btn-secondary:hover {
@@ -131,9 +132,13 @@ header {
   backdrop-filter: none;
   border-bottom: none;
   padding: 1rem 2rem;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header-video-bg {
@@ -149,25 +154,30 @@ header {
 
 body.light-mode header { background: rgba(255,255,255,0.9); border-bottom: 1px solid rgba(0,212,255,0.12); }
 
-nav { display: flex; justify-content: space-between; align-items: center; max-width: 1300px; }
+nav { 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 1rem;
+}
 .logo {
   width: 60px;
   height: 35px;
   transform: translate(10px, 6px) scale(2.5);
   transform-origin: left center;
+  position: absolute;
+  left: 0;
 }
-
-
-.nav-buttons { display:flex; gap:1rem; align-items:center; }
 
 /* MUDAR MARGEM CABEÇALHO */
 .nav-links {
-   display: flex;
-   margin-left: 165px;    
-   gap: 2rem;
+   display: flex;   
+   gap: 2.3rem;
    list-style: none;
    font-size: 20px;
-   font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+   font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   margin: 0;
 }
 
 .nav-links a {
@@ -183,8 +193,33 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
 }
 
 #userInfo {
-  min-width: 200px;
-  gap: 2rem;
+  min-width: auto;
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "verdana";
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #cbd5e1;
+}
+
+#userInfo i,
+#userInfo icon {
+  font-size: 24px;
+  color: #f7fafe;
+}
+
+#userInfo span {
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+.nav-buttons { 
+  position: absolute;
+  right: 0;
+  display: flex; 
+  gap: 1rem; 
+  align-items: center;
 }
 
 /* Botão Login Cores */
@@ -210,8 +245,6 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
    ----------------------------- */
 .headerstyle {
    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     background: transparent;
     z-index: 10;
@@ -299,7 +332,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
    7) Contador (countdown)
    ----------------------------- */
 .countdown { display:flex; justify-content:center; gap:2rem; margin:3rem 0; flex-wrap:wrap; }
-.countdown-item { background: rgba(255,255,255,0.05); backdrop-filter: blur(3.5px); padding:2rem; border-radius:15px; border:0px solid rgba(0,212,255,0.12); min-width:120px; transition:transform .25s; }
+.countdown-item { background: rgba(255,255,255,0.05); backdrop-filter: blur(3.5px); padding:2rem; border-radius:5px; border:0px solid rgba(0,212,255,0.12); min-width:120px; transition:transform .25s; }
 .countdown-item:hover { transform: translateY(-5px); border-color: var(--primary); }
 .countdown-number { font-size:3rem; font-weight:700; background: linear-gradient(135deg, #559ee2, #559ee2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .countdown-label { color:var(--gray); margin-top:0.5rem; }

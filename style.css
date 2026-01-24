@@ -6,6 +6,8 @@
    13) Formulários 14) Tipografia 15) Responsivo
    As cores e gradientes foram mantidos — se quiseres alterar, edita :root. */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 /* -----------------------------
    1) Reset e variáveis CSS
    ----------------------------- */
@@ -40,7 +42,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Ethnocentric;
+  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: var(--dark);
   color: var(--light);
   overflow-x: hidden;
@@ -164,7 +166,8 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
    margin-left: 165px;    
    gap: 2rem;
    list-style: none;
-   font-size: 20px;   
+   font-size: 20px;
+   font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
 }
 
 .nav-links a {
@@ -225,7 +228,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
   font-family: 'Ethnocentric', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
 }
-.subtitle { font-size:1.3rem; color:var(--gray); margin-bottom:2rem; }
+.subtitle { font-size:1.3rem; color:var(--gray); margin-bottom:2rem; font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
 /* Hero: inclui vídeo de fundo (se presente) e sobreposição escura */
 .hero {
@@ -312,8 +315,8 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
    8) Estilos genéricos para secções
    ----------------------------- */
 .section { margin:11.5rem 0; padding: 0 5rem; }
-.section-title { font-size:2.5rem; margin-bottom:1rem; text-align:center; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip:text ; -webkit-text-fill-color:transparent; background-clip:text; }
-.section-subtitle { font-size:1.7rem; color:var(--primary); margin-bottom:5rem; text-align:center; }
+.section-title { font-size:2.5rem; margin-bottom:1rem; text-align:center; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip:text ; -webkit-text-fill-color:transparent; background-clip:text; font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+.section-subtitle { font-size:1.7rem; color:var(--primary); margin-bottom:5rem; text-align:center; font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 .section-subtitle span {
   font-weight: 600;
 }
@@ -380,7 +383,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 .schedule-card:nth-child(4) .day-number { background: linear-gradient(135deg,#757bcf,#757bcf); }
 .schedule-card:nth-child(5) .day-number { background: linear-gradient(135deg,#559ee2,#559ee2); }
 
-.day-name { color:#e2e8f0; margin-bottom:0.25rem; }
+.day-name { color:#e2e8f0; margin-bottom:0.25rem; font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 .day-theme {
   /* manter tipografia igualzinha ao day-name excepto a cor */
   font-size: 0.8rem;
@@ -416,7 +419,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:1.5rem; margin-top: 5rem; }
 .card-header { display:flex; align-items:center; gap:1rem; margin-bottom:1rem; }
 .card-icon { width:60px; height:60px; border-radius:10px; background: linear-gradient(135deg,var(--primary),var(--secondary)); display:flex; align-items:center; justify-content:center; font-size:1.5rem; }
-.card h3 { color: var(--light); }
+.card h3 { color: var(--light); font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 .card p { color: var(--gray); line-height:1.6; }
 .speaker-img { width:200px; height:200px; object-fit:cover; border-radius:50%; background: linear-gradient(135deg,var(--primary),var(--secondary)); margin:0 auto 1rem; }
 
@@ -471,15 +474,20 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
     justify-content: center;
     width: 100%;
     margin-top: 4rem;
-    margin-bottom: 4rem;
 }
 /* -----------------------------
    16) Footer
    ----------------------------- */
-.footer { background: var(--darker); color: var(--light); padding: 3rem 0 1rem; margin-top: 4rem; }
-.footer-content { display: flex ; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; align-content: center; }
+.footer {   width: 100%;
+  padding: 4rem 1rem;
+  background: #000000; /* fundo preto como na imagem */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  
+.footer-content { display: flex ; flex-wrap: wrap; gap: 5rem; margin-bottom: 2rem; margin-left: 2rem; align-content: center; }
 .footer-section { flex: 1; min-width: 250px; align-items: center;}
-.footer-section h3 { color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem; }
+.footer-section h3 { color: var(--light); margin-bottom: 1rem; font-size: 1.2rem; }
 .footer-section p { margin: 0.5rem 0; color: var(--gray); }
 .footer-section ul { list-style: none; padding: 0; }
 .footer-section li { margin-bottom: 0.5rem; }
@@ -488,35 +496,15 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 .social-links { display: flex; gap: 1rem; }
 .social-links a { color: var(--gray); transition: color 0.3s; }
 .social-links a:hover { color: var(--primary); }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; text-align: center; color: var(--gray); font-size: 0.9rem; }
-
-/*Footer / Apoios*/
-.footer {
-  width: 100%;
-  padding: 4rem 1rem;
-  background: #000; /* fundo preto como na imagem */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-image {
-  display: block;
-  max-width: 100%;
-  height: auto;
-
-  margin-left: auto;   
-  margin-right: 0;
-
-  padding: 20px 40px;  
-}
 
 .footer-bottom {
-  text-align: left;
-  padding-left: 40px;
-}
+  border-top: 1px solid rgba(255,255,255,0.1);;
+  padding-top: 1rem;
+  text-align: center;
+  color: var(--gray);
+  font-size: 0.9rem; }
 
-
+/* Fim do ficheiro style.css */
 
 
 

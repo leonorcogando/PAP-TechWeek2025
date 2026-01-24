@@ -401,20 +401,19 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
   text-align: center;
 }
 
-/* -----------------------------
-   9) Programação (schedule)
-   ----------------------------- */
+/* 9) Agenda (schedule) */
 .schedule-grid { display:grid; margin-top: 5rem; grid-template-columns:1fr; gap:1rem;padding: 0 5rem;
  }
 @media (min-width:1024px) { .schedule-grid { grid-template-columns: repeat(5,1fr); } }
 .schedule-day { text-align:center; margin-bottom:1.25rem; }
 .day-number { width:64px; height:64px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:white; font-size:1.25rem; font-weight:700; margin-bottom:0.5rem; }
-/* Cores por dia (mantive os gradientes originais) */
-.schedule-card:nth-child(1) .day-number { background: linear-gradient(135deg,#e2048f,#e2048f); }
-.schedule-card:nth-child(2) .day-number { background: linear-gradient(135deg,#b634a9,#b634a9); }
-.schedule-card:nth-child(3) .day-number { background: linear-gradient(135deg,#935abd,#935abd); }
-.schedule-card:nth-child(4) .day-number { background: linear-gradient(135deg,#757bcf,#757bcf); }
-.schedule-card:nth-child(5) .day-number { background: linear-gradient(135deg,#559ee2,#559ee2); }
+/* Cores por dia */
+.schedule-card:nth-child(1) .day-number { background: #e2048f; }
+.schedule-card:nth-child(2) .day-number { background: #b634a9; }
+.schedule-card:nth-child(3) .day-number { background: #935abd; }
+.schedule-card:nth-child(4) .day-number { background: #757bcf; }
+.schedule-card:nth-child(5) .day-number { background: #559ee2; }
+
 
 .day-name { color:#e2e8f0; margin-bottom:0.25rem; font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 .day-theme {
@@ -428,11 +427,12 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 
 /* Aplicar aos textos .day-theme o mesmo gradiente do respetivo .day-number
    usando background-clip para que fiquem "da mesma cor" que o círculo */
-.schedule-card:nth-child(1) .day-theme { background: linear-gradient(135deg,#e2048f,#e2048f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.schedule-card:nth-child(2) .day-theme { background: linear-gradient(135deg,#b634a9,#b634a9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.schedule-card:nth-child(3) .day-theme { background: linear-gradient(135deg,#935abd,#935abd); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.schedule-card:nth-child(4) .day-theme { background: linear-gradient(135deg,#757bcf,#757bcf); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.schedule-card:nth-child(5) .day-theme { background: linear-gradient(135deg,#559ee2,#559ee2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.schedule-card:nth-child(1) .day-theme { color: #e2048f; }
+.schedule-card:nth-child(2) .day-theme { color: #b634a9; }
+.schedule-card:nth-child(3) .day-theme { color: #935abd; }
+.schedule-card:nth-child(4) .day-theme { color: #757bcf; }
+.schedule-card:nth-child(5) .day-theme { color: #559ee2; }
+
 
 .events-list { list-style:none; padding:0; }
 .event-item { border-left: 2px solid rgba(168,85,247,0.18); padding-left:1rem; padding-top:.5rem; padding-bottom:.5rem; margin-bottom:1rem; }
@@ -524,16 +524,16 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 .footer-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 5rem;
   margin-bottom: 2rem;
   margin-left: 2rem;
-  align-items: flex-start;   /* <-- ALINHA PELO TOPO */
+   /* alinhar verticalmente todos os elementos na mesma linha */
   align-content: flex-start; /* opcional: evita compressão estranha */
 }
 
 .footer-section {
   flex: 1;
   min-width: 250px;
+   margin-right: 12rem;
 }
 
 /* Texto/links mantêm-se como tinhas */
@@ -553,6 +553,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
   padding-left: 2rem;
   color: var(--gray);
   font-size: 0.9rem;
+  flex-basis: 100%; /* força o bottom a ocupar a linha toda abaixo */
 }
 
 .footer-image {
@@ -572,6 +573,20 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
   .footer-section {
     min-width: auto;        /* permite contrair sem forçar wrap estranho */
   }
+}
+
+.footer-techweek {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+}
+.footer-techweek img {
+  max-width: 300px; /* tornar o logo pequeno */
+  margin-right: 10rem;
+  height: auto;
+  display: block;
 }
 
 

@@ -284,8 +284,9 @@
         </div>
     </section>
 
+    <!-- ISTO NÃO É PARA APAGAR!!!!!!!!!!!!!!! -->
     <!--Oradores-->
-         <section class="section" id ="oradores" style="padding-top: 5rem;">
+         <!-- <section class="section" id ="oradores" style="padding-top: 2rem;">
             <h2 class="section-title section-title--plain">Oradores</h2>
             <div class="grid">
                 <div class="card">
@@ -309,7 +310,44 @@
                     <p><strong>Empresa:</strong> Aceleradora de startups de sucesso.</p>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+      <!-- Conexão dos Oradores com o FireBase   -->
+
+<section class="section" id="oradores" style="padding-top: 2rem;">
+  <h2 class="section-title section-title--plain">Oradores</h2>
+  <div class="grid" id="grid-oradores"></div>
+</section>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script src="firebaseconfig.js"></script>
+
+<script>
+  const db = firebase.firestore();
+
+  function card({ Nome, Cargo, Empresa }) {
+    return `
+      <div class="card">
+        <div class="speaker-img"></div>
+        <h3>${Nome ?? "—"}</h3>
+        <p><strong>Cargo:</strong> ${Cargo ?? "—"}</p>
+        <p><strong>Empresa:</strong> ${Empresa ?? "—"}</p>
+      </div>
+    `;
+  }
+
+  async function render() {
+    const grid = document.getElementById("grid-oradores");
+    grid.innerHTML = "";
+    const snap = await db.collection("Oradores").get();
+    snap.forEach(d => grid.innerHTML += card(d.data()));
+  }
+
+  render();
+</script>
+
 
      </div>
 
@@ -418,13 +456,12 @@
     
 
     <!-- JS -->
-    <script src="index.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
-    <script src="firebaseconfig.js"></script>
-    <script src="auth.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="email.js"></script>
+
+<script src="index.js"></script>
+<script src="auth.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="email.js"></script>
+
 
 </body>
 </html>

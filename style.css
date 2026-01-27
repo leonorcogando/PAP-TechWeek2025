@@ -1,16 +1,8 @@
-/* TechWeek - Folha de estilos organizada
-   Ordem e secções (com comentários em português):
-   1) Reset/Variáveis  2) Base  3) Utilitários  4) Cabeçalho/Nav
-   5) Fundo animado  6) Hero  7) Contador  8) Secções gerais
-   9) Programação 10) Palestrantes/Cartões 11) QR 12) Modais
-   13) Formulários 14) Tipografia 15) Responsivo
-   As cores e gradientes foram mantidos — se quiseres alterar, edita :root. */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-/* -----------------------------
-   1) Reset e variáveis CSS
-   ----------------------------- */
+/* Reset e variáveis CSS */
 * {
   margin: 0;
   padding: 0;
@@ -29,9 +21,7 @@
   --pink: #ff61a6;
 }
 
-/* -----------------------------
-   2) Base / Fundo da página
-   ----------------------------- */
+/* Base / Fundo da página */
 @font-face {
   font-family: 'Ethnocentric';
   /* usar caminho relativo para que o navegador consiga carregar ao servir o site */
@@ -75,10 +65,8 @@ body {
    pointer-events: none;
 }
 
-/* -----------------------------
-   3) Utilitários e helpers
-   - container, botões reutilizáveis, toggle de tema
-   ----------------------------- */
+/* Utilitários e helpers
+   - container, botões reutilizáveis, toggle de tema*/
 .container {
   margin: 0 ;
   padding: 0;
@@ -124,9 +112,7 @@ body {
 
 .theme-toggle { background: transparent; border: none; font-size: 1.4rem; cursor: pointer; padding: 0.5rem; }
 
-/* -----------------------------
-   4) Cabeçalho / Navegação
-   ----------------------------- */
+/* Cabeçalho / Navegação*/
 header {
   background: transparent;
   backdrop-filter: none;
@@ -240,9 +226,7 @@ nav {
 
 
 
-/* -------- ---------------------
-   5) Fundo animado (decorativo)
-   ----------------------------- */
+/* Fundo animado */
 .headerstyle {
    position: absolute;
     width: 100%;
@@ -252,7 +236,7 @@ nav {
 
 
 
-/* 6) Hero / Intro
+/* Hero / Intro
    - título, subtítulo, info e CTA  */
 h1 { font-size:3.5rem; margin-bottom:1rem; }
 
@@ -328,9 +312,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
-/* --------------f---------------
-   7) Contador (countdown)
-   ----------------------------- */
+/* Contador (countdown)*/
 .countdown { display:flex; justify-content:center; gap:2rem; margin:3rem 0; flex-wrap:wrap; }
 .countdown-item { background: rgba(255,255,255,0.05); backdrop-filter: blur(3.5px); padding:2rem; border-radius:5px; border:0px solid rgba(0,212,255,0.12); min-width:120px; transition:transform .25s; }
 .countdown-item:hover { transform: translateY(-5px); border-color: var(--primary); }
@@ -344,9 +326,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 
 
 
-/* -----------------------------
-   8) Estilos genéricos para secções
-   ----------------------------- */
+/* Estilos genéricos para secções */
 .section { margin:11.5rem 0; padding: 0 5rem; }
 .section-title { font-size:2.5rem; margin-bottom:1rem; text-align:center; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip:text ; -webkit-text-fill-color:transparent; background-clip:text; font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 .section-subtitle { font-size:1.7rem; color:var(--primary); margin-bottom:5rem; text-align:center; font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -375,7 +355,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
    color: var(--light) !important;
 }
 
-/* ===== Sobre a TechWeek ===== */
+/* Sobre a TechWeek */
 .about-text {
   max-width: 900px;
   margin: 0 auto;
@@ -402,12 +382,12 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 }
 
 /* 9) Agenda (schedule) */
-.schedule-grid { display:grid; margin-top: 5rem; grid-template-columns:1fr; gap:1rem;padding: 0 5rem;
- }
+.schedule-grid { display:grid; margin-top: 5rem; grid-template-columns:1fr; gap:1rem;padding: 0 5rem; padding-top: 4rem; }
+ 
 @media (min-width:1024px) { .schedule-grid { grid-template-columns: repeat(5,1fr); } }
 .schedule-day { text-align:center; margin-bottom:1.25rem; }
 .day-number { width:64px; height:64px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:white; font-size:1.25rem; font-weight:700; margin-bottom:0.5rem; }
-/* Cores por dia */
+/* Cores por número */
 .schedule-card:nth-child(1) .day-number { background: #e2048f; }
 .schedule-card:nth-child(2) .day-number { background: #b634a9; }
 .schedule-card:nth-child(3) .day-number { background: #935abd; }
@@ -417,16 +397,13 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 
 .day-name { color:#e2e8f0; margin-bottom:0.25rem; font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 .day-theme {
-  /* manter tipografia igualzinha ao day-name excepto a cor */
   font-size: 0.8rem;
   margin-bottom: 0.25rem;
   font-weight: 600;
-  /* cor por omissão (fallback) caso o gradiente não seja suportado */
   color: #c084fc;
 }
 
-/* Aplicar aos textos .day-theme o mesmo gradiente do respetivo .day-number
-   usando background-clip para que fiquem "da mesma cor" que o círculo */
+/* Cores por dia */
 .schedule-card:nth-child(1) .day-theme { color: #e2048f; }
 .schedule-card:nth-child(2) .day-theme { color: #b634a9; }
 .schedule-card:nth-child(3) .day-theme { color: #935abd; }
@@ -446,50 +423,38 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 .note-box { display:inline-flex; align-items:center; gap:.5rem; padding:.75rem 1.5rem; background: rgba(168,85,247,0.12); border:1px solid rgba(168,85,247,0.18); border-radius:4px; color:#cbd5e1; margin-bottom:6rem; }
 .note-box svg { width:20px; height:20px; color:#c084fc; }
 
-/* -----------------------------
-   10) Palestrantes / Cartões
-   ----------------------------- */
-.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:1.5rem; margin-top: 5rem; }
+/* Oradores */
+.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:1.5rem; margin-top: 5rem; padding-top: 5rem; }
 .card-header { display:flex; align-items:center; gap:1rem; margin-bottom:1rem; }
 .card-icon { width:60px; height:60px; border-radius:10px; background: linear-gradient(135deg,var(--primary),var(--secondary)); display:flex; align-items:center; justify-content:center; font-size:1.5rem; }
 .card h3 { color: var(--light); font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 .card p { color: var(--gray); line-height:1.6; }
 .speaker-img { width:200px; height:200px; object-fit:cover; border-radius:50%; background: linear-gradient(135deg,var(--primary),var(--secondary)); margin:0 auto 1rem; }
 
-/* -----------------------------
-   11) Secção QR
-   ----------------------------- */
+/* Secção QR 
 .qr-section { text-align:center; padding:3rem; background: rgba(255,255,255,0.03); backdrop-filter: blur(8px); border-radius:15px; border:1px solid rgba(0,212,255,0.06); }
-.qr-code { width:200px; height:200px; margin:2rem auto; background:white; padding:1rem; border-radius:15px; }
+.qr-code { width:200px; height:200px; margin:2rem auto; background:white; padding:1rem; border-radius:15px; } */
 
-/* -----------------------------
-   12) Modais
-   ----------------------------- */
+/* Modais */
 .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.75); backdrop-filter: blur(5px); z-index:2000; align-items:center; justify-content:center; }
 .modal.active { display:flex; }
-.modal-content { background: var(--darker); padding:2.25rem; border-radius:16px; max-width:520px; width:92%; border:1px solid rgba(0,212,255,0.06); animation: tw-slide-in .28s ease; }
+.modal-content { background: var(--darker); padding:2.25rem; border-radius:4px; max-width:520px; width:92%; border:1px solid rgba(0,212,255,0.06); animation: tw-slide-in .28s ease; }
 @keyframes tw-slide-in { from{ transform: translateY(-40px); opacity:0 } to{ transform:translateY(0); opacity:1 } }
 .modal-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; }
 .close-modal { background:none; border:none; font-size:1.6rem; color:var(--light); cursor:pointer; }
 
-/* -----------------------------
-   13) Formulários / Inputs
-   ----------------------------- */
+/* Formulários / Inputs */
 .input-group { margin-bottom:1rem; }
 .input-group label { display:block; margin-bottom:.5rem; color:var(--gray); }
 .input-group input { width:100%; padding:0.9rem; border:1px solid rgba(0,212,255,0.06); border-radius:8px; background: rgba(255,255,255,0.02); color:var(--light); font-size:1rem; }
 .input-group input:focus { outline:none; border-color: var(--primary); }
 
-/* -----------------------------
-   14) Ajustes tipográficos pequenos
-   ----------------------------- */
+/* Ajustes tipográficos pequenos */
 .subtitle { 
    margin-bottom: 1rem;
 }
 
-/* -----------------------------
-   15) Responsivo (apenas ajustes necessários)
-   ----------------------------- */
+/* Responsivo (apenas ajustes necessários) */
 @media (max-width: 768px) {
   h1 { font-size: 2.5rem; }
   .countdown { gap: 1rem; }
@@ -508,9 +473,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
     width: 100%;
     margin-top: 4rem;
 }
-/* -----------------------------
-   16) Footer
-   ----------------------------- */
+/* Footer */
 
 .footer {
   width: 100%;
@@ -549,8 +512,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 1rem;
-  padding-left: 2rem;
+  padding-top: 5rem;
   color: var(--gray);
   font-size: 0.9rem;
   flex-basis: 100%; /* força o bottom a ocupar a linha toda abaixo */
@@ -590,7 +552,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 }
 
 
-/* Fim do ficheiro style.css */
+
 
 
 

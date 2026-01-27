@@ -308,7 +308,6 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 24px; /* ← separação entre os botões */
   margin-top: 1rem;
   margin-bottom: 2rem;
 }

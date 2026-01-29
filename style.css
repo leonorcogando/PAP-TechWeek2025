@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-/* Reset e variáveis CSS */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,21 +10,20 @@
 }
 
 :root {
-  /* Cores principais do tema — manter aqui para fácil alteração */
+
   --primary: #589CE1;
   --secondary: #589CE1;
   --dark: #0a0e27;
-  --darker: #060920;
+  --darker: #090d2d;
   --light: #ffffff;
   --gray: #949fbf;
   --purple: #c084fc;
   --pink: #ff61a6;
 }
 
-/* Base / Fundo da página */
+
 @font-face {
   font-family: 'Ethnocentric';
-  /* usar caminho relativo para que o navegador consiga carregar ao servir o site */
   src: url('./fonts/Ethnocentric-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
@@ -86,6 +85,8 @@ body {
 .btn-primary {
   background: var(--primary);
   color: white;
+  border-radius: 3px;
+
 }
 
 .btn-primary:hover {
@@ -108,7 +109,7 @@ body {
 
 
 /* Botão grande para a área hero */
-.btn-lg { padding: 1rem 2rem; font-size: 1.05rem; border-radius: 4px; width: 10rem }
+.btn-lg { padding: 1rem 2rem; font-size: 1.05rem; border-radius: 3px; width: 10rem; }
 
 .theme-toggle { background: transparent; border: none; font-size: 1.4rem; cursor: pointer; padding: 0.5rem; }
 
@@ -214,17 +215,8 @@ nav {
   background: linear-gradient(135deg, #559ee2, #559ee2) !important;
   color: white !important;    
   transition: all 0.3s ease;
+  border-radius: 3px;
 }
-
-/*#loginButton:hover {
-  background: linear-gradient(135deg, #1855be, #1855be) !important;
-  transform: translateY(-3px);
-
-}*/
-
-           
-
-
 
 /* Fundo animado */
 .headerstyle {
@@ -326,9 +318,9 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 
 
 /* Estilos genéricos para secções */
-.section { margin:11.5rem 0; padding: 0 5rem; }
+.section { margin:11rem 0; padding: 0 5rem; }
 .section-title { font-size:2.5rem; margin-bottom:1rem; text-align:center; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip:text ; -webkit-text-fill-color:transparent; background-clip:text; font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-.section-subtitle { font-size:1.7rem; color:var(--primary); margin-bottom:5rem; text-align:center; font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+.section-subtitle { font-size:1.7rem; color:var(--primary); margin-bottom:7rem; text-align:center; font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 .section-subtitle span {
   font-weight: 600;
 }
@@ -354,30 +346,44 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
    color: var(--light) !important;
 }
 
+
 /* Sobre a TechWeek */
 .about-text {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: 0;
   margin-bottom: 10rem;
   padding: 0;
   background: transparent;
   border: none;
   border-radius: 0;
+  flex: 1;
+  
 }
 
-/* remover qualquer animação/hover */
-.about-text:hover {
-  transform: none;
-  box-shadow: none;
-  border-color: rgba(255,255,255,0.08);
-}
-
-/* texto */
 .about-text p {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.9;
   color: #e5e7eb;
-  text-align: center;
+  text-align: justify;
+  
+}
+
+.about-flex-container {
+  display: flex;        
+  align-items: center;  
+  gap: 5%;           
+  max-width: 100%;    
+  margin-top: 4rem;
+  justify-content: space-between;
+}
+
+.about-image img {
+  text-align: right;
+  width: 100%;
+  height: auto;
+  max-width: 40rem;
+  border-radius: 2px;
+  margin-bottom: 10rem;
 }
 
 /* 9) Agenda (schedule) */
@@ -445,7 +451,7 @@ h1 { font-size:3.5rem; margin-bottom:1rem; }
 /* Formulários / Inputs */
 .input-group { margin-bottom:1rem; }
 .input-group label { display:block; margin-bottom:.5rem; color:var(--gray); }
-.input-group input { width:100%; padding:0.9rem; border:1px solid rgba(0,212,255,0.06); border-radius:8px; background: rgba(255,255,255,0.02); color:var(--light); font-size:1rem; }
+.input-group input { width:100%; padding:0.9rem; border:1px solid rgba(0,212,255,0.06); border-radius:3px; background: rgba(255,255,255,0.02); color:var(--light); font-size:1rem; }
 .input-group input:focus { outline:none; border-color: var(--primary); }
 
 /* Ajustes tipográficos pequenos */

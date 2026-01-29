@@ -1,5 +1,4 @@
 // LOGIN
-//Para já para dar logout, abrir o f12 e colocar este código:firebase.auth().signOut()
 
 document.getElementById("loginBtn").addEventListener("click", () => {
   const email = document.getElementById("loginEmail").value;
